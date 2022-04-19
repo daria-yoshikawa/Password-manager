@@ -13,7 +13,7 @@ namespace Password_Manager
     public partial class AuthorizationForm : Form
     {
 
-       
+       Crypt crypt = new Crypt();
 
         public AuthorizationForm()
         {
@@ -26,17 +26,15 @@ namespace Password_Manager
         }
         private void Login()
         {
-            if ((!string.IsNullOrEmpty(txtPassword.Text)) && (File.Exists(PathFolder.PasSerial)))
+            if ((!string.IsNullOrEmpty(txtPassword.Text)) && (File.Exists(PathFolder.Pas)))
             {
-                string hashed = Crypt.HashKey(txtPassword.Text);
-                string stored = File.ReadAllText(PathFolder.PasSerial);
+                
+                string stored = crypt.Decrypt(txtPassword.Text,File.ReadAllText(PathFolder.Pas));
 
-                if (hashed == stored)
+                if (Crypt.HashKey(txtPassword.Text) == stored)
                 {
                     
-                    txtPassword.Text = string.Empty;
-                    hashed = string.Empty;
-                    stored = string.Empty;
+                  
 
                     Program.SetMainForm(new MainForm(Crypt.HashKey(txtPassword.Text)));
                     this.Close();
@@ -52,6 +50,19 @@ namespace Password_Manager
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
         }
     }
 

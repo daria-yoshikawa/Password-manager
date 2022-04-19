@@ -28,128 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.AddNewButton = new System.Windows.Forms.Button();
+            this.output = new Password_Manager.output_pass();
+            this.AccountView = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.AliceBlue;
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
+            this.splitContainer1.Panel1.Controls.Add(this.EditButton);
+            this.splitContainer1.Panel1.Controls.Add(this.ExitButton);
+            this.splitContainer1.Panel1.Controls.Add(this.DeleteButton);
+            this.splitContainer1.Panel1.Controls.Add(this.AddNewButton);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(1010, 776);
-            this.splitContainer1.SplitterDistance = 335;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Panel2.Controls.Add(this.output);
+            this.splitContainer1.Panel2.Controls.Add(this.AccountView);
+            this.splitContainer1.Size = new System.Drawing.Size(875, 593);
+            this.splitContainer1.SplitterDistance = 289;
             this.splitContainer1.TabIndex = 0;
             // 
-            // button3
+            // EditButton
             // 
-            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(24, 148);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(285, 95);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Редактировать";
-            this.button3.UseVisualStyleBackColor = false;
+            this.EditButton.AutoSize = true;
+            this.EditButton.BackColor = System.Drawing.Color.MistyRose;
+            this.EditButton.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EditButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.EditButton.Location = new System.Drawing.Point(21, 103);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(249, 71);
+            this.EditButton.TabIndex = 4;
+            this.EditButton.Text = "Редактировать";
+            this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click_1);
             // 
-            // button2
+            // ExitButton
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(24, 264);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(285, 95);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Удалить";
-            this.button2.UseVisualStyleBackColor = false;
+            this.ExitButton.AutoSize = true;
+            this.ExitButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.ExitButton.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ExitButton.Location = new System.Drawing.Point(21, 498);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(249, 71);
+            this.ExitButton.TabIndex = 3;
+            this.ExitButton.Text = "Выйти";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // button1
+            // DeleteButton
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(24, 35);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(285, 95);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.DeleteButton.AutoSize = true;
+            this.DeleteButton.BackColor = System.Drawing.Color.MistyRose;
+            this.DeleteButton.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DeleteButton.Location = new System.Drawing.Point(21, 180);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(249, 71);
+            this.DeleteButton.TabIndex = 1;
+            this.DeleteButton.Text = "Удалить";
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
-            // dataGridView1
+            // AddNewButton
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Title,
-            this.Username,
-            this.Password});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(664, 770);
-            this.dataGridView1.TabIndex = 0;
+            this.AddNewButton.BackColor = System.Drawing.Color.MistyRose;
+            this.AddNewButton.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddNewButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddNewButton.Location = new System.Drawing.Point(21, 26);
+            this.AddNewButton.Name = "AddNewButton";
+            this.AddNewButton.Size = new System.Drawing.Size(249, 71);
+            this.AddNewButton.TabIndex = 0;
+            this.AddNewButton.Text = "Добавить";
+            this.AddNewButton.UseVisualStyleBackColor = false;
+            this.AddNewButton.Click += new System.EventHandler(this.AddNewButton_Click);
             // 
-            // Title
+            // output
             // 
-            this.Title.HeaderText = "Title";
-            this.Title.MinimumWidth = 6;
-            this.Title.Name = "Title";
-            this.Title.Width = 125;
+            this.output.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("output.BackgroundImage")));
+            this.output.Location = new System.Drawing.Point(3, 3);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(576, 289);
+            this.output.TabIndex = 1;
             // 
-            // Username
+            // AccountView
             // 
-            this.Username.HeaderText = "Username";
-            this.Username.MinimumWidth = 6;
-            this.Username.Name = "Username";
-            this.Username.Width = 125;
+            this.AccountView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AccountView.BackColor = System.Drawing.Color.AliceBlue;
+            this.AccountView.ForeColor = System.Drawing.Color.DeepPink;
+            this.AccountView.Location = new System.Drawing.Point(3, 298);
+            this.AccountView.MultiSelect = false;
+            this.AccountView.Name = "AccountView";
+            this.AccountView.Size = new System.Drawing.Size(576, 292);
+            this.AccountView.TabIndex = 0;
+            this.AccountView.UseCompatibleStateImageBehavior = false;
+            this.AccountView.ItemActivate += new System.EventHandler(this.AccountView_ItemActivate);
+            this.AccountView.SelectedIndexChanged += new System.EventHandler(this.AccountView_SelectedIndexChanged);
             // 
-            // Password
+            // imageList1
             // 
-            this.Password.HeaderText = "Password";
-            this.Password.MinimumWidth = 6;
-            this.Password.Name = "Password";
-            this.Password.Width = 125;
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "89osDqGMA3M.jpg");
+            this.imageList1.Images.SetKeyName(1, "A7rDMq2P03U.jpg");
+            this.imageList1.Images.SetKeyName(2, "bc80n6NFK3Y.jpg");
+            this.imageList1.Images.SetKeyName(3, "BErjdbhSPgc.jpg");
+            this.imageList1.Images.SetKeyName(4, "Epxy_dJbL1c.jpg");
+            this.imageList1.Images.SetKeyName(5, "Gx2GivI7qNA.jpg");
+            this.imageList1.Images.SetKeyName(6, "jp0RML1-Wdw.jpg");
+            this.imageList1.Images.SetKeyName(7, "-Jy1V98YiOM.jpg");
+            this.imageList1.Images.SetKeyName(8, "ntwHmVHUIb4.jpg");
+            this.imageList1.Images.SetKeyName(9, "nwikjpeN87U.jpg");
+            this.imageList1.Images.SetKeyName(10, "osxM55LyqqI.jpg");
+            this.imageList1.Images.SetKeyName(11, "rdkPfZ8KjQE.jpg");
+            this.imageList1.Images.SetKeyName(12, "URAhjT9k7zk.jpg");
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 776);
+            this.ClientSize = new System.Drawing.Size(875, 593);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -157,7 +178,6 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,12 +185,12 @@
         #endregion
 
         private SplitContainer splitContainer1;
-        private Button button1;
-        private Button button3;
-        private Button button2;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Title;
-        private DataGridViewTextBoxColumn Username;
-        private DataGridViewTextBoxColumn Password;
+        private Button AddNewButton;
+        private Button DeleteButton;
+        private Button ExitButton;
+        private ListView AccountView;
+        private output_pass output;
+        private Button EditButton;
+        private ImageList imageList1;
     }
 }

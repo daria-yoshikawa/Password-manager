@@ -9,8 +9,8 @@ namespace Password_Manager
     internal class PathFolder
     {
         internal readonly static string DataFolder =  "Data";
-        internal readonly static string PasSerial = Path.Combine(DataFolder, "Pas.txt");
-        internal readonly static string PasData = Path.Combine(DataFolder, "Pas.data");
+        internal readonly static string Pas = Path.Combine(DataFolder, "Pas.dat");
+        internal readonly static string PasData = Path.Combine(DataFolder, "PasData.dat");
 
         // custom SALT file
         internal readonly static string PasSalt = Path.Combine(DataFolder, "Pas.salt");
@@ -23,6 +23,7 @@ namespace Password_Manager
                 {
                     Directory.CreateDirectory(DataFolder);
                 }
+                
             }
             catch (Exception err)
             {

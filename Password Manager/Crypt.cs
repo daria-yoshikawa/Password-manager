@@ -20,15 +20,16 @@ namespace Password_Manager
 
 
         }
+        
         private byte[][] GetHashKeys(string key)
         {
             byte[][] result = new byte[2][];
-            Encoding enc = Encoding.UTF8;
+           
 
             SHA256 sha256 = SHA256.Create();
 
-            byte[] rawKey = enc.GetBytes(key);
-            byte[] rawIV = enc.GetBytes(key);
+            byte[] rawKey = Encoding.UTF8.GetBytes(key);
+            byte[] rawIV = Encoding.UTF8.GetBytes(key);
 
             byte[] hashKey = sha256.ComputeHash(rawKey);
             byte[] hashIV = sha256.ComputeHash(rawIV);
@@ -40,9 +41,9 @@ namespace Password_Manager
 
             return result;
         }
-        internal byte[] Encrypt(string key, string data)
+        internal string Encrypt(string key, string data)
         {
-            byte[] encrypted = null;
+            string encrypted = null;
             byte[][] keys = GetHashKeys(key);
 
             try
@@ -50,14 +51,15 @@ namespace Password_Manager
                 encrypted = EncryptStringToBytes_Aes(data, keys[0], keys[1]);
             }
             catch { }
-
+              
             return encrypted;
         }
 
-        internal string Decrypt(string key, byte[] data)
+        internal string Decrypt(string key, string data)
         {
             string decrypted = null;
             byte[][] keys = GetHashKeys(key);
+           
 
             try
             {
@@ -67,7 +69,7 @@ namespace Password_Manager
 
             return decrypted;
         }
-        static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
+        static string EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
         {
             // Check arguments.
             if (plainText == null || plainText.Length <= 0)
@@ -104,11 +106,12 @@ namespace Password_Manager
             }
 
             // Return the encrypted bytes from the memory stream.
-            return encrypted;
+            return Convert.ToBase64String(encrypted);
         }
 
-        static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
+        static string DecryptStringFromBytes_Aes(string cipherTextString, byte[] Key, byte[] IV)
         {
+            byte[] cipherText = Convert.FromBase64String(cipherTextString);
             // Check arguments.
             if (cipherText == null || cipherText.Length <= 0)
                 throw new ArgumentNullException("cipherText");
