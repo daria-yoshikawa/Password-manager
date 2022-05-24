@@ -39,13 +39,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.onScreenKeyboard1 = new Password_Manager.Controls.OnScreenKeyboard();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Pink;
             this.button2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(194, 288);
+            this.button2.Location = new System.Drawing.Point(279, 304);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 39);
             this.button2.TabIndex = 15;
@@ -59,7 +60,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(129, 119);
+            this.label3.Location = new System.Drawing.Point(214, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 24);
             this.label3.TabIndex = 14;
@@ -68,7 +69,7 @@
             // name_text
             // 
             this.name_text.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.name_text.Location = new System.Drawing.Point(194, 116);
+            this.name_text.Location = new System.Drawing.Point(279, 132);
             this.name_text.Name = "name_text";
             this.name_text.Size = new System.Drawing.Size(226, 32);
             this.name_text.TabIndex = 13;
@@ -79,7 +80,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(99, 223);
+            this.label2.Location = new System.Drawing.Point(184, 239);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 12;
@@ -91,7 +92,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 169);
+            this.label1.Location = new System.Drawing.Point(104, 185);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 24);
             this.label1.TabIndex = 11;
@@ -100,7 +101,7 @@
             // pas_text
             // 
             this.pas_text.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pas_text.Location = new System.Drawing.Point(194, 220);
+            this.pas_text.Location = new System.Drawing.Point(279, 236);
             this.pas_text.Name = "pas_text";
             this.pas_text.Size = new System.Drawing.Size(226, 32);
             this.pas_text.TabIndex = 10;
@@ -109,7 +110,7 @@
             // username_text
             // 
             this.username_text.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.username_text.Location = new System.Drawing.Point(194, 166);
+            this.username_text.Location = new System.Drawing.Point(279, 182);
             this.username_text.Name = "username_text";
             this.username_text.Size = new System.Drawing.Size(226, 32);
             this.username_text.TabIndex = 9;
@@ -118,7 +119,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Crimson;
             this.button1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(308, 288);
+            this.button1.Location = new System.Drawing.Point(393, 304);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 39);
             this.button1.TabIndex = 16;
@@ -132,7 +133,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(163, 43);
+            this.label4.Location = new System.Drawing.Point(248, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(267, 24);
             this.label4.TabIndex = 17;
@@ -146,7 +147,7 @@
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(426, 229);
+            this.checkBox1.Location = new System.Drawing.Point(511, 245);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(67, 19);
             this.checkBox1.TabIndex = 18;
@@ -154,13 +155,22 @@
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // onScreenKeyboard1
+            // 
+            this.onScreenKeyboard1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.onScreenKeyboard1.Location = new System.Drawing.Point(12, 354);
+            this.onScreenKeyboard1.Name = "onScreenKeyboard1";
+            this.onScreenKeyboard1.Size = new System.Drawing.Size(760, 189);
+            this.onScreenKeyboard1.TabIndex = 19;
+            // 
             // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(561, 369);
+            this.ClientSize = new System.Drawing.Size(784, 601);
+            this.Controls.Add(this.onScreenKeyboard1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
@@ -191,5 +201,6 @@
         private Button button1;
         private Label label4;
         private CheckBox checkBox1;
+        private Controls.OnScreenKeyboard onScreenKeyboard1;
     }
 }

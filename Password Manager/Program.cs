@@ -51,9 +51,9 @@ namespace Password_Manager
                     foreach (Account account in MainForm.Accounts)
                     {
 
-                       
-                        writer.Write(account.Username);
                         writer.Write(account.Name);
+                        writer.Write(account.Username);
+                       
                         writer.Write(account.Password);
                        
 
